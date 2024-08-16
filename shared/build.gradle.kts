@@ -11,6 +11,12 @@ plugins {
 
 group = "com.example.publishkmmlibrary"
 
+
+val artifact = "PublishKMMLibrary"
+val pkgUrl = "https://github.com/CATawde-hash/PublishKMMLibrary"
+val gitUrl = "github.com:CATawde-hash/PublishKMMLibrary.git"
+
+
 repositories {
     google()
     mavenCentral()
@@ -43,6 +49,9 @@ kotlin {
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
+
+        androidMain.dependencies {  }
+        iosMain.dependencies {  }
     }
 }
 
