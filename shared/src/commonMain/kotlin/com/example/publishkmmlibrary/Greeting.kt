@@ -1,4 +1,4 @@
-package com.example. git remote add origin https://github.com/CATawde-hash/PublishKMMLibrary.git
+package com.example.publishkmmlibrary
 
 class Greeting {
     private val platform: Platform = getPlatform()
