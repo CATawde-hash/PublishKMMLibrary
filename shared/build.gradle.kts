@@ -58,9 +58,15 @@ kotlin {
 
 android {
     namespace = "com.example.publishkmmlibrary"
-    compileSdk = 34
+    /*compileSdk = 34
     defaultConfig {
         minSdk = 24
+    }*/
+    compileSdk = 32
+    defaultConfig {
+        minSdk = 22
+        targetSdk = 32
+        multiDexEnabled = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
