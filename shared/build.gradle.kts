@@ -6,7 +6,10 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.compose.compiler)
     id("maven-publish")
+    id("signing")
 }
+
+group = "com.example.publishkmmlibrary"
 
 kotlin {
     androidTarget {
