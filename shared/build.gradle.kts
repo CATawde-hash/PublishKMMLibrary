@@ -11,6 +11,12 @@ plugins {
 
 group = "com.example.publishkmmlibrary"
 
+repositories {
+    google()
+    mavenCentral()
+}
+
+
 kotlin {
     androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
@@ -40,6 +46,7 @@ kotlin {
     }
 }
 
+
 android {
     namespace = "com.example.publishkmmlibrary"
     compileSdk = 34
@@ -50,4 +57,20 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
+    sourceSets {
+        getByName("main") {
+            manifest.srcFile("src\\androidMain\\AndroidManifest.xml")
+            java.srcDirs("src\\androidMain\\kotlin")
+            res.srcDirs("src\\androidMain\\res")
+        }
+    }
 }
+
+
+
+
