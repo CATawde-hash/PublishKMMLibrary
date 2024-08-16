@@ -9,7 +9,7 @@ plugins {
     id("signing")
 }
 
-group = "com.example.publishkmmlibrary"
+group = "com.github.CATawde-hash"
 
 
 val artifact = "PublishKMMLibrary"
