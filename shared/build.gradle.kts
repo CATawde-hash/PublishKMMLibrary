@@ -24,10 +24,17 @@ repositories {
 
 
 kotlin {
-    androidTarget {
+  /*  androidTarget {
         @OptIn(ExperimentalKotlinGradlePluginApi::class)
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
+        }
+    }*/
+    androidTarget {
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = "1.8"
+            }
         }
     }
     
@@ -65,12 +72,12 @@ android {
     compileSdk = 32
     defaultConfig {
         minSdk = 22
-        targetSdk = 32
+        targetSdk = 34
         multiDexEnabled = true
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     testOptions {
         unitTests {
